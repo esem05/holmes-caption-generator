@@ -11,6 +11,9 @@ model_trained = BlipForConditionalGeneration.from_pretrained("saarah005/blip-fin
 
 
 def holmesify(caption):
+    '''
+    Function to holmesify captions
+    '''
     # Small dictionary of style replacements
     replacements = {
     # ---- People ----
@@ -128,7 +131,7 @@ def infer(image):
         # To Holmesify
         return holmesify(caption)
 
-
+#CSS for gradio
 custom_css = """
 
 /* Host container holds all theme variables */
